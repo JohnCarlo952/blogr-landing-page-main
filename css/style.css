@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Ubuntu&display=swap");
+
+/* || RESETS */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--FF-UBUNTU);
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+:root {
+  /* || COLOR */
+  /* Primary */
+  --Light-red-CTATEXT: hsl(356, 100%, 66%);
+  --Very-light-red-CTAHOVERBG: hsl(355, 100%, 74%);
+  --Very-dark-blue-HEADINGS: hsl(208, 49%, 24%);
+
+  /* Neutral */
+  --White-TEXT: hsl(0, 0%, 100%);
+  --Grayish-blue-FOOTERTEXT: hsl(240, 2%, 79%);
+  --Very-dark-grayish-blue-BODY: hsl(207, 13%, 34%);
+  --Very-dark-black-blue-FOOTERBG: hsl(240, 10%, 16%);
+
+  /* Gradient */
+  /* Background gradient - Intro/CTA mobile nav: */
+  --Very-light-red: rgb(255, 143, 112);
+  --Light-red: rgb(255, 61, 84);
+  /* Background gradient - body: */
+  --Very-dark-gray-blue: hsl(237, 17%, 21%);
+  --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+  /* FONT */
+  --FF-OVERPASS: "Overpass", sans-serif;
+  --FF-UBUNTU: "Ubuntu", sans-serif;
+}
+
+/* || HEADER NAV */
+.header {
+  width: 100%;
+  min-height: 80vh;
+  background-image: url("../images/bg-pattern-intro-mobile.svg"),
+    linear-gradient(var(--Very-light-red), var(--Light-red));
+  background-position: 40% 40%;
+  border-radius: 0 0 0 20%;
+  padding: 0 5%;
+}
+.header__nav {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__logo img {
+  width: 75px;
+}
+.header__ul,
+.header__btns {
+  display: none;
+}
+.hamburgerMenu {
+  width: 30px;
+  height: 15px;
+}
+
+/* || HEADER HERO */
+.hero {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero > h1 {
+  font-size: clamp(2.5rem, 1rem + 3.5vw, 4rem);
+  color: var(--White-TEXT);
+  margin-bottom: 20px;
+}
+.hero > p {
+  font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+  color: var(--White-TEXT);
+  margin-bottom: 50px;
+}
+.ctn {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.ctn a:first-child {
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--White-TEXT);
+  color: var(--Light-red);
+  padding: 10px 15px;
+  font-size: clamp(0.75rem, 0.75rem + 1vw, 1.25rem);
+  border-radius: 30px;
+}
+.ctn a:last-child {
+  font-weight: 600;
+  text-align: center;
+  background-color: transparent;
+  color: var(--White-TEXT);
+  padding: 10px 15px;
+  font-size: clamp(0.75rem, 0.75rem + 1vw, 1.25rem);
+  border: 1px solid var(--White-TEXT);
+  border-radius: 30px;
+}
