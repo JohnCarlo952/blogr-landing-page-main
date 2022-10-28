@@ -11,6 +11,8 @@
     />
     <title>Frontend Mentor | [Blogr]</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <header class="header">
@@ -20,8 +22,8 @@
         /></a>
         <ul class="header__ul">
           <li>
-            <label for="drpDown" class="drpDown__label">Product</label>
-            <input type="checkbox" name="drpDown" id="" />
+            <label for="drpDown-1" class="drpDown__label">Product</label>
+            <input type="checkbox" name="drpDown" id="drpDown-1" />
             <ul class="drpDown__ul">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
@@ -31,8 +33,8 @@
             </ul>
           </li>
           <li>
-            <label for="drpDown" class="drpDown__label">Company</label>
-            <input type="checkbox" name="drpDown" id="" />
+            <label for="drpDown-2" class="drpDown__label">Company</label>
+            <input type="checkbox" name="drpDown" id="drpDown-2" />
             <ul class="drpDown__ul">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
@@ -41,8 +43,8 @@
             </ul>
           </li>
           <li>
-            <label for="drpDown" class="drpDown__label">Connect</label>
-            <input type="checkbox" name="drpDown" id="" />
+            <label for="drpDown-3" class="drpDown__label">Connect</label>
+            <input type="checkbox" name="drpDown" id="drpDown-3" />
             <ul class="drpDown__ul">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
@@ -51,13 +53,13 @@
           </li>
         </ul>
         <div class="header__btns">
-          <a href="header__login">Login</a>
-          <a href="header__signup">Sign Up</a>
+          <a href="#" class="header__login">Login</a>
+          <a href="#" class="header__signup">Sign Up</a>
         </div>
         <img class="hamburgerMenu" src="images/icon-hamburger.svg" />
       </nav>
       <section class="hero">
-        <h1>A modern publishing platform</h1>
+        <h1 data-aos="fade-down">A modern publishing platform</h1>
         <p>Grow your audience and build your online brand</p>
         <div class="ctn">
           <a href="#">Start for free</a>
@@ -68,11 +70,11 @@
 
     <main class="main">
       <section class="main__firstsection">
-        <h2>Designed for the future</h2>
+        <h2 data-aos="fade-down">Designed for the future</h2>
         <section>
           <img src="images/illustration-editor-mobile.svg" />
           <div>
-            <h2>Introducing an extensible editor</h2>
+            <h2 data-aos="fade-right">Introducing an extensible editor</h2>
             <p>
               Blogr features an exceedingly intuitive interface which lets you
               focus on one thing: creating content. The editor supports
@@ -81,7 +83,7 @@
               plugins and themes provide easy ways to add functionality ore
               change the looks of a blog.
             </p>
-            <h2>Robust content management</h2>
+            <h2 data-aos="fade-right">Robust content management</h2>
             <p>
               FLexible content management enables users to easily move through
               posts. Increase the usability of your blog posts. Increase the
@@ -95,7 +97,7 @@
       <section class="main__secondsection">
         <img src="images/illustration-phones.svg" />
         <div>
-          <h2>State of the Art Infrastructure</h2>
+          <h2 data-aos="fade-right">State of the Art Infrastructure</h2>
           <p>
             with reliability and speed in mind, worldwide data center provide
             the backbone for ultra-fast connectivity. This ensures your site
@@ -108,7 +110,7 @@
       <section class="main__thirdsection">
         <img src="images/illustration-laptop-mobile.svg" />
         <div>
-          <h2>Free, open, simple</h2>
+          <h2 data-aos="fade-right">Free, open, simple</h2>
           <p>
             Blogr is a free and open source application backed by a large
             community of helpful developers. It supports features such as code
@@ -116,7 +118,7 @@
             third-party commenting tools, and works seemlessly with Google
             Analytics. The architecture is clean and relatively easy to learn.
           </p>
-          <h2>Powerful tooling</h2>
+          <h2 data-aos="fade-right">Powerful tooling</h2>
           <p>
             Batteries included, We built a simple and straighforward CLI tool
             that makes customization and deployment a breeze, but capable of
@@ -127,32 +129,42 @@
     </main>
 
     <footer class="footer">
-      <a class="header__logo" href="#"
+      <a class="footer__logo" href="#"
         ><img src="images/logo.svg" alt="LOGO"
       /></a>
       <ul class="footer__ul">
-        <li>Product</li>
-        <ul class="footer__submenu">
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Integrations</a></li>
-        </ul>
-        <li>Company</li>
-        <ul class="footer__submenu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-        <li>Connect</li>
-        <ul class="footer__submenu">
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Newsletter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
+        <div class="menu">
+          <li>Product</li>
+          <ul class="footer__submenu">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <li>Company</li>
+          <ul class="footer__submenu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <li>Connect</li>
+          <ul class="footer__submenu">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
       </ul>
     </footer>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
