@@ -10,10 +10,73 @@
   font-family: var(--FF-UBUNTU);
 }
 
+/* || UTILITIES */
+.primary-btn {
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--White-TEXT);
+  color: var(--Light-red);
+  padding: 10px 15px;
+  font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+  border-radius: 30px;
+  font-family: var(--FF-OVERPASS);
+  transition: all 0.5s;
+}
+.secondary-btn {
+  font-weight: 600;
+  text-align: center;
+  background-color: transparent;
+  color: var(--White-TEXT);
+  padding: 10px 15px;
+  font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+  border: 1px solid var(--White-TEXT);
+  border-radius: 30px;
+  font-family: var(--FF-OVERPASS);
+  transition: all 0.5s;
+}
+
+/* || HOVER EFFECTS */
+.ctn a:first-child:hover,
+.ctn a:first-child:focus {
+  background-color: var(--Very-light-red-CTAHOVERBG);
+  color: var(--White-TEXT);
+}
+.ctn a:last-child:hover,
+.ctn a:last-child:focus {
+  background-color: var(--White-TEXT);
+  color: var(--Light-red);
+}
+
+.footer__submenu li a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.drpDown__ul li a:hover,
+.drpDown__ul li a:focus {
+  font-weight: 600;
+}
+
+.header__signup:hover,
+.header__signup:focus {
+  background-color: var(--Very-light-red-CTAHOVERBG);
+  color: var(--White-TEXT);
+}
+
+input[type="checkbox"]:checked + .drpDown__ul {
+  opacity: 1;
+}
+
+/* || GENERAL */
 a:any-link {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* || VARIABLES */
 :root {
   /* || COLOR */
   /* Primary */
@@ -99,39 +162,6 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
   column-gap: 10px;
-}
-.ctn a:first-child {
-  font-weight: 600;
-  text-align: center;
-  background-color: var(--White-TEXT);
-  color: var(--Light-red);
-  padding: 10px 15px;
-  font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
-  border-radius: 30px;
-  font-family: var(--FF-OVERPASS);
-  transition: all 0.5s;
-}
-.ctn a:first-child:hover,
-.ctn a:first-child:focus {
-  background-color: var(--Very-light-red-CTAHOVERBG);
-  color: var(--White-TEXT);
-}
-.ctn a:last-child {
-  font-weight: 600;
-  text-align: center;
-  background-color: transparent;
-  color: var(--White-TEXT);
-  padding: 10px 15px;
-  font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
-  border: 1px solid var(--White-TEXT);
-  border-radius: 30px;
-  font-family: var(--FF-OVERPASS);
-  transition: all 0.5s;
-}
-.ctn a:last-child:hover,
-.ctn a:last-child:focus {
-  background-color: var(--White-TEXT);
-  color: var(--Light-red);
 }
 
 /* || MAIN SECTION */
@@ -285,9 +315,6 @@ input[type="checkbox"] {
 .footer__submenu li a {
   color: var(--Grayish-blue-FOOTERTEXT);
 }
-.footer__submenu li a:hover {
-  text-decoration: underline;
-}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 481px) {
@@ -369,7 +396,7 @@ input[type="checkbox"] {
     position: absolute;
     background-color: var(--White-TEXT);
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
     opacity: 0;
     top: 10px;
     transition: opacity 0.5s ease-in-out;
@@ -392,14 +419,7 @@ input[type="checkbox"] {
     color: #000;
     font-weight: 500;
   }
-  .drpDown__ul li a:hover,
-  .drpDown__ul li a:focus {
-    font-weight: 600;
-  }
 
-  input[type="checkbox"]:checked + .drpDown__ul {
-    opacity: 1;
-  }
   .header__btns {
     flex: 1;
     text-align: right;
@@ -414,20 +434,9 @@ input[type="checkbox"] {
   }
   .header__signup {
     font-weight: 500;
-    text-align: center;
-    background-color: var(--White-TEXT);
-    color: var(--Light-red);
-    padding: 10px 25px;
     font-size: clamp(0.75rem, 0.35rem + 0.75vw, 1.5rem);
-    border-radius: 1.875rem;
-    font-family: var(--FF-OVERPASS);
-    transition: all 0.5s;
   }
-  .header__signup:hover,
-  .header__signup:focus {
-    background-color: var(--Very-light-red-CTAHOVERBG);
-    color: var(--White-TEXT);
-  }
+
   .header .header__logo {
     margin-right: 1.875rem;
   }
@@ -450,8 +459,7 @@ input[type="checkbox"] {
     margin-top: 5rem;
   }
   .main__firstsection section img {
-    margin-top: 2rem;
-    width: 100%;
+    width: min(600px, 100%);
     min-height: max(549px, 80%);
     margin: 0 auto;
     transform: translateY(-4rem);
@@ -518,7 +526,7 @@ input[type="checkbox"] {
   }
 
   .main__thirdsection img {
-    width: 100%;
+    width: min(600px, 100%);
     min-height: max(549px, 80%);
     transform: translateY(-8rem);
     margin-top: 0;
